@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--엣날 방식의 빈 설정 -->
+    <!--<bean id="bookService"
+          class="com.inflearnspringboot.applicationcontext.BookService">
+        <property name="bookRepository" ref="bookRepository"/> //설정 파일 내에 property를 이용하여 Bean 주입
+    </bean>
+    &lt;!&ndash;scope="" 등 여러 설정이 추가로 존재...&ndash;&gt;
+
+
+    <bean id="bookRepository" class="com.inflearnspringboot.applicationcontext.BookRepository"/>
+    -->
+
+    <!-- Spring 2.5 부터의 빈 설정 -->
+    <context:component-scan base-package="com.inflearnspringboot.applicationcontext"/>
+    <!--component-scan을 통해 어노테이션을 이용하요 스캔하여 bean 등록-->
+</beans>
